@@ -39,4 +39,5 @@ $ git clone git://git.kernel.org/pub/scm/git/git.git
 |`git add <file>`| 把文件添加到仓库 |
 |`git add -A`| 全部添加到仓库 |
 |`git commit -m "message"`|提交到仓库，并添加描述|
-
+|`git status`|查看当前仓库状态|
+|`git diff`|查看修改|
