@@ -41,3 +41,4 @@ $ git clone git://git.kernel.org/pub/scm/git/git.git
 |`git commit -m "message"`|提交到仓库，并添加描述|
 |`git status`|查看当前仓库状态|
 |`git diff`|查看修改|
+|`git log`|查看提交历史|
