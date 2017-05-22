@@ -49,3 +49,22 @@ $ git clone git://git.kernel.org/pub/scm/git/git.git
 |`git reset --hard $id`|回到 $id 版本|
 |`git checkout -- <file>`|丢弃工作区的修改|
 |`git reset HEAD <file>`|把暂存区的修改撤销掉|
+
+## 远程命令
+
+| 命令 | 描述 |
+|------|------|
+|`git remote add origin <git@address>`|关联远程库|
+|`git push -u origin master`|把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来|
+|`git push origin master`|推送到远程|
+|`git clone <git@address>`|克隆远程库到本地|
+
+## 分支管理
+| 命令 | 描述 |
+|------|------|
+|`git checkout -b <branch-name>`|创建并切换到新分支|
+|`git branch <branch-name>`|创建分支|
+|`git checkout <branch-name>`|切换分支|
+|`git branch`|查看分支信息，带*为当前|
+
+
