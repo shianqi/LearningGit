@@ -42,3 +42,6 @@ $ git clone git://git.kernel.org/pub/scm/git/git.git
 |`git status`|查看当前仓库状态|
 |`git diff`|查看修改|
 |`git log`|查看提交历史|
+|`git reflog`|记录操作命令|
+|`git reset --hard HEAD~n`|回退n个版本|
+|`git reset --hard $id`|回到 $id 版本|
