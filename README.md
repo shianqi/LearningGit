@@ -40,8 +40,12 @@ $ git clone git://git.kernel.org/pub/scm/git/git.git
 |`git add -A`| 全部添加到仓库 |
 |`git commit -m "message"`|提交到仓库，并添加描述|
 |`git status`|查看当前仓库状态|
-|`git diff`|查看修改|
+|`git diff`|工作区(work dict)和暂存区(stage)的比较|
+|`git diff --cached`|暂存区(stage)和分支(master)的比较|
+|`git diff HEAD -- <file>`|查看工作区和版本库里面最新版本的区别|
 |`git log`|查看提交历史|
 |`git reflog`|记录操作命令|
 |`git reset --hard HEAD~n`|回退n个版本|
 |`git reset --hard $id`|回到 $id 版本|
+|`git checkout -- <file>`|丢弃工作区的修改|
+|`git reset HEAD <file>`|把暂存区的修改撤销掉|
