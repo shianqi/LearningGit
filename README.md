@@ -28,7 +28,7 @@ $ ./configure --prefix=/usr
 $ make all doc info
 $ sudo make install install-doc install-html install-info
 ```
-更新
+更新 git
 ```
 $ git clone git://git.kernel.org/pub/scm/git/git.git
 ```
@@ -69,3 +69,5 @@ $ git clone git://git.kernel.org/pub/scm/git/git.git
 |`git merge <branch-name>`|合并某分支到当前分支|
 |`git branch -d <branch-name>`|删除分支|
 |`git log --graph`| 查看分支合并图 |
+
+fix bug
