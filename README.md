@@ -67,7 +67,31 @@ $ git clone git://git.kernel.org/pub/scm/git/git.git
 |`git branch <branch-name>`|创建分支|
 |`git checkout <branch-name>`|切换分支|
 |`git merge <branch-name>`|合并某分支到当前分支|
+|`git merge --no-ff -m "<message>" <branch-name>`|禁用`Fast forward`合并，可以看到合并历史|
 |`git branch -d <branch-name>`|删除分支|
 |`git log --graph`| 查看分支合并图 |
 
-fix bug
+## 分支策略
+| 分支 | 描述 |
+|------|------|
+|`master`|稳定，仅用来发布新版本，不能在上面干活|
+|`dev`|不稳定，到达新版本合并到`master`上|
+
+每人都有自己的分支，时不时地往dev分支上合并就可以了。
+
+## bug分支
+| 命令 | 描述 |
+|------|------|
+|`git stash`|保存当前工作现场|
+|`git stash list`|查看所有工作现场|
+|`git stash apply`|恢复工作现场，但不删除|
+|`git stash drop`|删除工作现场|
+|`git stash pop`|恢复工作现场并删除|
+
+1. 在 `dev` 下正常开发中，说有1个bug要解决，首先我需要把 `dev` 分支封存 `stash`
+2. 在 `master` 下新建一个`issue-101`分支，解决bug，成功后
+3. 在 `master` 下合并 `issue-101`，并 `fix #1`
+4. 在 `dev` 下合并 `master`，这样才同步了里面的bug解决方案
+5. 恢复`dev`封存 `stash pop`，系统自动合并 & 提示有冲突，因为封存前 `dev` 写了东西，此时去文件里手动改冲突
+6. 继续开发`dev`，最后 `add` ，`commit`
+7. 在 `master` 下合并最后完成的`dev`
