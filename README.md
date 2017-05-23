@@ -62,10 +62,10 @@ $ git clone git://git.kernel.org/pub/scm/git/git.git
 ## 分支管理
 | 命令 | 描述 |
 |------|------|
+|`git branch`|查看分支信息，带*为当前|
 |`git checkout -b <branch-name>`|创建并切换到新分支|
 |`git branch <branch-name>`|创建分支|
 |`git checkout <branch-name>`|切换分支|
-|`git branch`|查看分支信息，带*为当前|
 |`git merge <branch-name>`|合并某分支到当前分支|
 |`git branch -d <branch-name>`|删除分支|
-butter~
+|`git log --graph`| 查看分支合并图 |
